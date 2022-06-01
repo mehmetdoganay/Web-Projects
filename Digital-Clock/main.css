@@ -1,0 +1,37 @@
+body {
+    background-color: #21325E;
+    color: #F1D00A;
+}
+
+h2 {
+    font-family: 'Goldman', cursive;
+    font-size: 50px;
+}
+
+#clock {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.clock-items {
+    margin-right:5%;
+    margin: 2%;
+    padding: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    font-size: 50px;
+}
