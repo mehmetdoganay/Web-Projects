@@ -27,8 +27,9 @@ body {
 }
 
 #head-text {
-    color: #3D9491;
-    padding: 15px 15px;
+    color: var(--Cyan);
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 #head-p {
@@ -61,8 +62,8 @@ button {
     box-sizing: border-box;
 }
 
-
-
-
-.attribution { font-size: 11px; text-align: center; }
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
 .attribution a { color: hsl(228, 45%, 44%); }
