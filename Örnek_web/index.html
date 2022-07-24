@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Mehmet Doğanay">
+    <meta name="description" content="Web tasarım, web design,">
+    <meta name="keywords" content="boostrap,css,javascript">
+    <!--call favicon-->
+    <link rel="icon" href="img/favicon.png">
+
+    <title>New Design</title>
+    <!-- Call all.css-->
+    <style>@import url(css/all.css);</style>
+</head>
+<body id="page-body">
+    <!--navbar start-->
+    <!--navbar-expand-lg navbar large ekranın altına düşerse açılır bir navbar olacak-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a href="#page-body" class="navbar-brand text-uppercase" title="My Daily website link"><i class="bi bi-book"></i> My Daily</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas"
+            data-bs-target="#myNavbar" 
+            aria-controls="myNavbar" aria-label="Menüyü açma kapama butonu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="myNavbar" aria-labelledby="myLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="myLabel">Menü</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="kapat"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!--ms-auto sağa konumlandırır-->
+                    <ul class="nabvar-nav ms-auto text-uppercase py-lg-2">
+                        <li class="nav-item"><a href="#services" class="nav-link btn-close-canvas">services</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link btn-close-canvas">portfolio</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link btn-close-canvas">about</a></li>
+                        <li class="nav-item"><a href="#team" class="nav-link btn-close-canvas">team</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link btn-close-canvas">contact</a></li>
+                    </ul>
+                </div>
+            </div>       
+        </div>
+    </nav>
+    <!--navbar finish-->
+    <!--Header start-->
+    <header class="backImage text-white text-center">
+        <div class="container ">
+            <div class="backImage-sub">Welcome to my website</div>
+            <div class="backImage-heading text-uppercase">Nice to meet you</div>
+            <a href="#services" class="btn btn-danger btn-lg p-lg-4 text-uppercase fw-bolder" >More about</a>
+        </div>
+    </header>
+    <!--Header finish-->
+
+    <!--services start-->
+    <section id="services" class="mySection">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="s-heading text-uppercase fw-bold">Services</h2>
+                <h4 class="s-subheading text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, voluptates?</h4>
+            </div>
+            <div class="row  text-center">
+                <div class="col-md-4">
+                    <!--align-items-center dikeyde ortalar -->
+                    <!--justify-content-center yatayda ortalar-->
+                    <!--m-auto kutunun içerisinde ortalar-->
+                    <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center m-auto" style="width: 8rem; height: 8rem;" aria-hidden="true">
+                        <i class="bi bi-journal-text" style="font-size:3rem"></i>
+                    </div>
+                    <h4 class="fw-bold my-4 text-uppercase">Read</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nulla eaque, magni aliquam neque a quas rem itaque esse nam!</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center m-auto" style="width: 8rem; height: 8rem;" aria-hidden="true">
+                        <i class="bi bi-pencil" style="font-size:3rem"></i>
+                    </div>
+                    <h4 class="fw-bold my-4 text-uppercase">Write</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vel cumque iusto illo commodi incidunt. Quaerat obcaecati nihil suscipit. Cupiditate deleniti deserunt esse sit.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center m-auto" style="width: 8rem; height: 8rem;" aria-hidden="true">
+                        <i class="bi bi-archive" style="font-size:3rem"></i>
+                    </div>
+                    <h4 class="fw-bold my-4 text-uppercase">Save</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ea quisquam eligendi corrupti non, eaque eius, iusto iure necessitatibus saepe neque magnam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services finish-->
+    <script src="js/boostrap/bootstrap.bundle.min.js"></script>
+    <script src="js/custom/extra.js"></script>
+</body>
+</html>
