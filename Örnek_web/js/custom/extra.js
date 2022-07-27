@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", event => {
         }
     }
     navbarMobile();
-    // Eğer scrall olayı gerçekleşirsa navbarMobile fonksiyonunu çağır diyoruz
+    // Eğer scroll olayı gerçekleşirse navbarMobile fonksiyonunu çağır diyoruz
     document.addEventListener("scroll",navbarMobile)
 
     const myNavbar = document.querySelector("#mainNavbar");
@@ -32,12 +32,22 @@ window.addEventListener("DOMContentLoaded", event => {
     }
 })
 
+
 var btnCanvas = document.querySelectorAll(".btn-close-canvas");
 for(let i = 0; i < btnCanvas.length; i++) 
 {   
     btnCanvas[i].addEventListener("click", function (){
-        document.querySelector('[data-bs-toggle="offcanvas"]').click();
-        console.log("asdas")
+        // Canvası kapatma butonu canvas acık değilken kapatma aktif olmaması için bir kontrol eklendi
+        // sadece canvas açık olduğunda eklenen show classı control değişkenine atıldı
+        var control =document.querySelector(".offcanvas-end.show")
+        if(!control)
+        {
+            return;
+        }else {
+            document.querySelector('[data-bs-toggle="offcanvas"]').click();
+        }
+        
+        
     }); 
 }
 
