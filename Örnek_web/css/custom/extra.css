@@ -57,6 +57,8 @@ header.backImage .backImage-heading {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    font-family: 'Fraunces', serif;
+    font: 700;
 }
 
 .mySection h4.s-subheading {
@@ -156,6 +158,9 @@ header.backImage .backImage-heading {
     text-align: right;
     margin-right: 0.5rem;
     position: absolute;
+    /* position absolute olduğunda button diğer contentlerin altında kalıyor ve butona basılamıyor */
+    /* z-index: 1  ile buton ön tarafa alınıyor ve buton kullanılabiliyor*/
+    z-index: 1;
     right: 1.5rem;
     top: 1rem;
 }
@@ -205,10 +210,6 @@ header.backImage .backImage-heading {
         line-height: 1.5rem;
     }
 
-    .p-modal .close-modal {
-        position: relative;
-    }
-
 }
 
 /*992px(large) ekranın üzerinde ise alttaki değerleri uygula*/
@@ -236,3 +237,116 @@ header.backImage .backImage-heading {
         transition: font-size 0.3s ease-in-out;
     }
 }
+
+/* about start */
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1;
+    content: "";
+    background-color: #dadde0;
+}
+
+.timeline > li:after,
+.timeline > li:before {
+    display: table;
+    content: "";
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li {
+    margin-bottom: 3rem;
+}
+
+.timeline > li .t-panel {
+    text-align: left;
+    padding: 0px 20px 0 100px;
+}
+
+
+.timeline > li .t-image {
+    position: absolute;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: #dadde0;
+    border:  7px solid ;
+    border-radius: 100%;
+}
+
+.timeline>li .t-image {
+    background-color: white;
+    
+}
+
+.timeline>li .t-image i {
+    font-size: 2.5rem;
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+    .timeline > li .t-panel {
+        float: left;
+        width: 40%;
+        padding: 0px 0px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline > li .t-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .t-image i {
+        font-size: 3.2rem;
+    }
+
+    .timeline>li .t-panel-right {
+        float: right;
+        text-align: left;
+        padding: 0px 20px 20px 0px;
+    } 
+}
+
+@media (min-width: 992px) {
+    .timeline > li .t-image {
+        left: 50%;
+        width: 140px;
+        height: 140px;
+        margin-left: -70px;
+    }
+
+    .timeline > li .t-panel {
+        width: 35%;
+    }
+
+    .timeline>li .t-image i {
+        font-size: 5rem;
+    }
+}
+
+/* about finish */
